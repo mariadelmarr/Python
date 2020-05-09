@@ -3,4 +3,4 @@ b = 10
 
 area = a * b
 
-print ('El area del cuadrado es: '+str(area)+'.')
+print ('El area del cuadrado es : '+str(area)+'.')
