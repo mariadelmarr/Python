@@ -1,0 +1,1 @@
+Practica de sets interseccion de pares, impares, primos y compuestos
