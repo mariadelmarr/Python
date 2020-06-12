@@ -1,0 +1,3 @@
+# Cree un programa en Python que cree un set con los números compuestos del 1 al 100 y un set con los números impares del 1 al 100.
+# Usando esos dos sets, cree un tercer set (comp_even) con los números compuestos pares.
+# Luego pregunte al usuario un número y búsque este número entre el set (comp_even).
