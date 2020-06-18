@@ -1,0 +1,8 @@
+Investigue cómo crear un menu en Python.
+Cree un programa de Python con un menú interactivo con las opciones:
+*La hora
+*El día del mes
+*El día de la semana
+*El mes
+*El año
+*Salir
