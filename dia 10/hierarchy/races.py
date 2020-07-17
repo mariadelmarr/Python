@@ -1,9 +1,13 @@
 from dog import Dog
 class JackRussellTerrier(Dog):
-    pass
+    race = 'JackRussellTerrier'
+    def speak(self, sound='Argg'):
+        return f'{sound} es lo que dice {self.name}'
 
 class Dachsund(Dog):
-    pass
+    race = 'Dachshund'
 
 class Bulldog(Dog):
-    pass
+    race = 'Bulldog'
+    
+
