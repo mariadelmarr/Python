@@ -27,33 +27,33 @@ def menuPrincipal():
 
     if selection.lower() == 'a':
         def menuTeacher():
-        print('Menu:\n')
-        print('''
-        a.Ingresar profesor
-        b.Mostrar profesores
-        c.Editar profesores
-        d.Eliminar profesores
-        e.Ir al menu principal
-        ''')
-        selection = input()
-
-        if selection.lower() == 'a':
-            addTeacher()
-            menuTeacher()
-        elif selection.lower() == 'b':
-            printTeacher()
-            menuTeacher()
-        elif selection.lower() == 'c':
-            editTeacher()
-            menuTeacher()
-        elif selection.lower() == 'd':
-            deletTeacher()
-            menuTeacher()
-        elif selection.lower() == 'e':
-            menuPrincipal()
-        else:
-            print('Opcion incorrecta')
-            menuPrincipal()
+            print('Menu:\n')
+            print('''
+            a.Ingresar profesor
+            b.Mostrar profesores
+            c.Editar profesores
+            d.Eliminar profesores
+            e.Ir al menu principal
+            ''')
+            selection = input()
+            
+            if selection.lower() == 'a':
+                addT()
+                menuTeacher()
+            elif selection.lower() == 'b':
+                displayT()
+                menuTeacher()
+            elif selection.lower() == 'c':
+                updateT()
+                menuTeacher()
+            elif selection.lower() == 'd':
+                deleteT()
+                menuTeacher()
+            elif selection.lower() == 'e':
+                menuPrincipal()
+            else:
+                print('Opcion incorrecta')
+                menuPrincipal()
 
     if selection.lower() == 'b':
         def menuStudents():
