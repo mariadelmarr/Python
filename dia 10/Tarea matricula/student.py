@@ -10,7 +10,7 @@ class Student:
         student['name', Carne] = input('Ingrese un nombre: '+ carne)
         ob = Student(Name, Carne) 
         ls.append(ob)
-        carne ++
+        carne += 1
       
     def displayStudent(self, ob): 
             print("Name   : ", ob.name) 
