@@ -1,17 +1,35 @@
-# Debe tener además una tupla con los cursos ya existentes. (‘Inglés’, ‘Ciencias’...)
-# El programa debe tener un menú interactivo que permita dar mantenimiento a las listas de profesores y estudiantes.
-# Además debe de poder crear grupos en un diccionario donde el key es la letra A, B, C, … A estos grupos se les asigna un curso, un profesor y varios estudiantes. Almacene estos grupos en una lista de diccionarios.
-# Debe poder imprimir el estado actual de los grupos.
-
-class Teacher:
-    species = "Profesor"
-
-    def __init__(self, name, course):
-        self.name = name
-        self.age = age
+class Teacher: 
+    
+    def __init__(self, name, carneT): 
+        self.name = name 
+        self.carneT = carneT
+            
+    def addT(self, Name, carneT):
+        Teacher = {}
+        carneT = 0
+        teacher['name', Carnet] = input('Ingrese un nombre: '+ carnet)
+        ob = Teacher(Name, Carnet) 
+        ls.append(ob)
+        carnet = carnet += 1  
+      
+    def displayT(self, ob): 
+            print("Name   : ", ob.name) 
+            print("Carne : ", ob.carneT) 
+            print("\n")     
+            
+    def searchT(self, id): 
+        for i in range(ls.__len__()): 
+            if(ls[i].carneT == id): 
+                return i        
+                                  
+    def deleteT(self, id): 
+        i = obj.search(id)   
+        del ls[i] 
+      
+    def updateT(self, id, No): 
+        i = obj.search(id) 
+        idStd = No 
+        ls[i].carneT = idStd; 
         
-    def __str__(self):
-         return f"Este {Teacher.species} se llama {self.name} y imparte el curso {self.course} "
-         
-    def speak(self, sound):
-         return f"{self.name} dice {sound
+ls =['Eduardo', 1] 
+obj = Teacher('', 0) 

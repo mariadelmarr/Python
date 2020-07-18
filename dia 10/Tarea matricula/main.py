@@ -1,24 +1,27 @@
+# El programa debe tener un menú interactivo que permita dar mantenimiento a las listas de profesores y estudiantes.
+# Además debe de poder crear grupos en un diccionario donde el key es la letra A, B, C, … A estos grupos se les asigna un curso, un profesor y varios estudiantes. Almacene estos grupos en una lista de diccionarios.
+# Debe poder imprimir el estado actual de los grupos.
+
+
 from teacher import Teacher
 from student import Student
 from list import Courses
 from list import Group
 from list import List
 
-Teacher = List()
-# dogs.append(1)
-# dogs.append('a')
-# dogs.append(False)
 
-# print(dogs)
+Courses = ('English', 'Maths', 'Science', 'Geography')
+
 
 def menuPrincipal():
     print('Menu:\n')
     print('''
     a.Teachers
     b.Students
-    c.Courses
-    d.Groups
-    e.Salir
+    c.Print Courses
+    d.Add Groups
+    e.Print Groups
+    f.Exit
     ''')
     selection = input()
 
@@ -30,53 +33,28 @@ def menuPrincipal():
         b.Mostrar profesores
         c.Editar profesores
         d.Eliminar profesores
-        e.Salir
+        e.Ir al menu principal
         ''')
         selection = input()
 
         if selection.lower() == 'a':
             addTeacher()
-            menu()
+            menuTeacher()
         elif selection.lower() == 'b':
             printTeacher()
-            menu()
+            menuTeacher()
         elif selection.lower() == 'c':
             editTeacher()
-            menu()
+            menuTeacher()
         elif selection.lower() == 'd':
             deletTeacher()
-            menu()
+            menuTeacher()
         elif selection.lower() == 'e':
-            print ('Saliendo...')
+            menuPrincipal()
         else:
             print('Opcion incorrecta')
-        
-        def addTeacher():
-            teacher = None
-            print(f'1-{JackRussellTerrier.race} 2-{Dachsund.race} 3-{Bulldog.race}')
-            race = input('Raza? ')
-            name = input('Nombre? ')
-            age = input('Edad? ')
+            menuPrincipal()
 
-            if int(race) == 1:
-                dog = JackRussellTerrier(name, age)
-            elif int(race) == 2:
-                dog = Dachsund(name, age)
-            elif int(race) == 3:
-                dog = Bulldog(name, age)
-
-            dogs.append(dog)
-
-        def printDogs():
-            print(dogs)
-
-        def editDog():
-            pass
-
-        def deletDog():
-            pass
-
-        menu()
     if selection.lower() == 'b':
         def menuStudents():
         print('Menu:\n')
@@ -85,84 +63,42 @@ def menuPrincipal():
         b.Mostrar estudiante
         c.Editar estudiante
         d.Eliminar estudiante
-        e.Salir
+        e.Ir al menu principal
         ''')
         selection = input()
 
         if selection.lower() == 'a':
             addStudent()
-            menu()
+            menuStudents()
         elif selection.lower() == 'b':
-            printStudent()
-            menu()
+            displayStudent()
+            menuStudents()
         elif selection.lower() == 'c':
-            editStudent()
-            menu()
+            updateStudent()
+            menuStudents()
         elif selection.lower() == 'd':
-            deletStudentr()
-            menu()
+            deleteStudent()
+            menuStudents()
         elif selection.lower() == 'e':
-            print ('Saliendo...')
+            menuPrincipal()
         else:
             print('Opcion incorrecta')
+            menuPrincipal()
 
     if selection.lower() == 'c':
-        def menuCourses():
-        print('Menu:\n')
-        print('''
-        a.Ingresar curso
-        b.Mostrar curso
-        c.Editar curso
-        d.Eliminar curso
-        e.Salir
-        ''')
-        selection = input()
+        printCourses()
+        menuPrincipal()
 
-        if selection.lower() == 'a':
-            addCoursest()
-            menu()
-        elif selection.lower() == 'b':
-            printCourses()
-            menu()
-        elif selection.lower() == 'c':
-            editCourses()
-            menu()
-        elif selection.lower() == 'd':
-            deletCourses()
-            menu()
-        elif selection.lower() == 'e':
-            print ('Saliendo...')
-        else:
-            print('Opcion incorrecta')
+    if selection.lower() == 'd':
+        addGroup()
+        menuPrincipal()
+    
+    if selection.lower() == 'e'
+        printGroup()
+        menuPrincipal()
 
-    if selection.lower() == 'b':
-        def menuGroup():
-        print('Menu:\n')
-        print('''
-        a.Ingresar estudiante
-        b.Mostrar estudiante
-        c.Editar estudiante
-        d.Eliminar estudiante
-        e.Salir
-        ''')
-        selection = input()
-
-        if selection.lower() == 'a':
-            addGroup()
-            menu()
-        elif selection.lower() == 'b':
-            printGroup()
-            menu()
-        elif selection.lower() == 'c':
-            editGroup()
-            menu()
-        elif selection.lower() == 'd':
-            deletGroup()
-            menu()
-        elif selection.lower() == 'e':
-            print ('Saliendo...')
-        else:
-            print('Opcion incorrecta')
+    if selection.lower() == 'f'
+        print('Ciao')
 
 #o bien para hacer los 3 imports anteriores d ela siguiente manera
 #import races import *
