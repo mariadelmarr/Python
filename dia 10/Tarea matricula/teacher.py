@@ -4,14 +4,14 @@
 # Debe poder imprimir el estado actual de los grupos.
 
 class Teacher:
-    # species = "Canis familiaritis"
+    species = "Profesor"
 
-    # def __init__(self, name, age):
-    #     self.name = name
-    #     self.age = age
+    def __init__(self, name, course):
+        self.name = name
+        self.age = age
         
-    # def __str__(self):
-    #     return f"Este {Dog.species} se llama {self.name} y es de {self.age} años"
+    def __str__(self):
+         return f"Este {Teacher.species} se llama {self.name} y imparte el curso {self.course} "
          
-    # def speak(self, sound):
-    #     return f"{self.name} dice {sound
+    def speak(self, sound):
+         return f"{self.name} dice {sound
