@@ -5,10 +5,7 @@
 
 from teacher import Teacher
 from student import Student
-from list import Courses
-from list import Group
-from list import List
-
+from list import *
 
 Courses = ('English', 'Maths', 'Science', 'Geography')
 
@@ -57,33 +54,33 @@ def menuPrincipal():
 
     if selection.lower() == 'b':
         def menuStudents():
-        print('Menu:\n')
-        print('''
-        a.Ingresar estudiante
-        b.Mostrar estudiante
-        c.Editar estudiante
-        d.Eliminar estudiante
-        e.Ir al menu principal
-        ''')
-        selection = input()
+            print('Menu:\n')
+            print('''
+            a.Ingresar estudiante
+            b.Mostrar estudiante
+            c.Editar estudiante
+            d.Eliminar estudiante
+            e.Ir al menu principal
+            ''')
+            selection = input()
 
-        if selection.lower() == 'a':
-            addStudent()
-            menuStudents()
-        elif selection.lower() == 'b':
-            displayStudent()
-            menuStudents()
-        elif selection.lower() == 'c':
-            updateStudent()
-            menuStudents()
-        elif selection.lower() == 'd':
-            deleteStudent()
-            menuStudents()
-        elif selection.lower() == 'e':
-            menuPrincipal()
-        else:
-            print('Opcion incorrecta')
-            menuPrincipal()
+            if selection.lower() == 'a':
+                addStudent()
+                menuStudents()
+            elif selection.lower() == 'b':
+                displayStudent()
+                menuStudents()
+            elif selection.lower() == 'c':
+                updateStudent()
+                menuStudents()
+            elif selection.lower() == 'd':
+                deleteStudent()
+                menuStudents()
+            elif selection.lower() == 'e':
+                menuPrincipal()
+            else:
+                print('Opcion incorrecta')
+                menuPrincipal()
 
     if selection.lower() == 'c':
         printCourses()
@@ -93,11 +90,11 @@ def menuPrincipal():
         addGroup()
         menuPrincipal()
     
-    if selection.lower() == 'e'
+    if selection.lower() == 'e':
         printGroup()
         menuPrincipal()
 
-    if selection.lower() == 'f'
+    if selection.lower() == 'f':
         print('Ciao')
 
 #o bien para hacer los 3 imports anteriores d ela siguiente manera

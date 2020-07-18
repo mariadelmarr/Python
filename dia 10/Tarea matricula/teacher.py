@@ -10,7 +10,7 @@ class Teacher:
         teacher['name', Carnet] = input('Ingrese un nombre: '+ carnet)
         ob = Teacher(Name, Carnet) 
         ls.append(ob)
-        carnet = carnet += 1  
+        carnet ++ 
       
     def displayT(self, ob): 
             print("Name   : ", ob.name) 
