@@ -2,12 +2,12 @@
 # Además debe de poder crear grupos en un diccionario donde el key es la letra A, B, C, … A estos grupos se les asigna un curso, un profesor y varios estudiantes. Almacene estos grupos en una lista de diccionarios.
 # Debe poder imprimir el estado actual de los grupos.
 
-
 from teacher import Teacher
 from student import Student
 from list import *
 
-Courses = ('English', 'Maths', 'Science', 'Geography')
+courses = ('English', 'Maths', 'Science', 'Geography')
+groups = {'key' : ['A1'],'course' : None , 'Teacher' : None , 'Student' : None}
 
 
 def menuPrincipal():
@@ -35,7 +35,7 @@ def menuPrincipal():
             selection = input()
             
             if selection.lower() == 'a':
-                addT()
+                Teacher.addT()
                 menuTeacher()
             elif selection.lower() == 'b':
                 displayT()
@@ -51,6 +51,8 @@ def menuPrincipal():
             else:
                 print('Opcion incorrecta')
                 menuPrincipal()
+
+        menuTeacher()
 
     if selection.lower() == 'b':
         def menuStudents():
@@ -82,8 +84,11 @@ def menuPrincipal():
                 print('Opcion incorrecta')
                 menuPrincipal()
 
+        menuStudents()
+
+    
     if selection.lower() == 'c':
-        printCourses()
+        printCourses('', courses)
         menuPrincipal()
 
     if selection.lower() == 'd':
@@ -96,6 +101,8 @@ def menuPrincipal():
 
     if selection.lower() == 'f':
         print('Ciao')
+
+menuPrincipal()
 
 #o bien para hacer los 3 imports anteriores d ela siguiente manera
 #import races import *

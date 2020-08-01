@@ -31,6 +31,6 @@ class Student:
         idStd = No 
         ls[i].carne = idStd; 
         
-ls =[] 
+ls =['Mar', 1] 
 obj = Student('', 0) 
   

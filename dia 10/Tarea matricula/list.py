@@ -4,3 +4,5 @@ class MyList(list):
         for item in self:
             items += '-->' + str(item) + '...\n'
         return items
+
+    def courses()
